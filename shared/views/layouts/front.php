@@ -29,14 +29,59 @@
     <?= $v->section("styles") ?>
 </head>
 
-<body>
+<body style="background-image: url(<?= url("/shared/images/front/background_01.svg") ?>);">
     <header class="header">
-        <div class="container"></div>
+        <div class="container">
+            <a class="header-brand" href="<?= $router->route("fron.front") ?>" title="<?= $siteSettings->name ?>">
+                <?php if ($siteSettings->logo) : ?>
+                    <h1 class="sr-only"><?= $siteSettings->name ?></h1>
+                    <img src="<?= url("/shared" . $siteSettings->logo) ?>" alt="<?= $siteSettings->name ?>">
+                <?php else : ?>
+                    <h1><?= $siteSettings->name ?></h1>
+                <?php endif; ?>
+            </a>
+
+            <button class="btn bg-transparent <?= icon_class("menu") ?> d-lg-none ml-auto"></button>
+
+            <div class="header-nav d-none d-lg-flex">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $router->route("fron.front") ?>">
+                            Início
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            Comprar
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            Contato
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            Sobre
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="ml-4">
+                    <button class="btn btn-primary">
+                        Minha Conta
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="main">
         <div class="container">
-            <div class="message-area mt-2">
+            <div class="message-area">
                 <?php if ($flash = message_flash()) {
                     echo $flash->render();
                 } ?>
