@@ -100,6 +100,41 @@ body {
                 }
             }
         }
+
+        &.fixed-header-navbar {
+            background-color: rgb($light-light, 0.98)  !important;
+            width: calc(100% - 12px);
+            height: 50px !important;
+            margin-left: 6px;
+            border-left: 1px solid $primary-light  !important;
+            border-right: 1px solid $primary-light  !important;
+            border-bottom: 1px solid $primary-light  !important;
+            box-shadow: 0 0 8px 4px rgb($dark-dark, 0.25) !important;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+
+            .header-brand {
+                img {
+                    width: 100%;
+                    max-width: 125px;
+                }
+            }
+
+            .header-nav {
+                .nav {
+                    .nav-item {
+                        .nav-link {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+
+                .btn {
+                    padding-top: 4px !important;
+                    padding-bottom: 4px !important;
+                }
+            }
+        }
     }
 
     .banner {

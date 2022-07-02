@@ -9106,6 +9106,29 @@ body .header .header-nav .nav .nav-item .nav-link {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
+body .header.fixed-header-navbar {
+  background-color: rgba(249, 249, 249, 0.98) !important;
+  width: calc(100% - 12px);
+  height: 50px !important;
+  margin-left: 6px;
+  border-left: 1px solid #A33BC8 !important;
+  border-right: 1px solid #A33BC8 !important;
+  border-bottom: 1px solid #A33BC8 !important;
+  box-shadow: 0 0 8px 4px rgba(24, 24, 24, 0.25) !important;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+body .header.fixed-header-navbar .header-brand img {
+  width: 100%;
+  max-width: 125px;
+}
+body .header.fixed-header-navbar .header-nav .nav .nav-item .nav-link {
+  font-size: 0.8rem;
+}
+body .header.fixed-header-navbar .header-nav .btn {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
 body .banner {
   display: flex;
   align-items: center;

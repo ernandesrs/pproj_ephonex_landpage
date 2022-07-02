@@ -102,6 +102,7 @@
         "jquery-ui.min.js",
         "bootstrap.min.js",
         "global-scripts.js",
+        "headerplugin.js",
         "front/scripts.js",
     ];
 
@@ -110,7 +111,11 @@
     }
 
     ?>
-
+    <script>
+        $(".header").monitore(".main", {
+            class: "fixed-header-navbar"
+        });
+    </script>
     <?= $v->section("scripts") ?>
 
 </body>
