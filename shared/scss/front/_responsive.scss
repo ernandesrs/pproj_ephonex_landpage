@@ -1,5 +1,67 @@
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .banner {
+        .banner-content {
+            .title {
+                font-size: 3.25rem;
+            }
 
-@media (min-width: 992px) {}
+            .subtitle {
+                font-size: 1.125rem;
+            }
+        }
 
-@media (min-width: 1200px) {}
+        .banner-ilustrations {
+            .image {
+                &.top {
+                    left: -50px;
+                }
+    
+                &.bottom {
+                    right: -150px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        .header-brand {
+            img {
+                max-width: 243px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner {
+        .banner-content {
+            .title {
+                font-size: 4.25rem;
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        .banner-ilustrations {
+            .image {
+                &.overshadowed {
+                    display: block;
+                }
+
+                &.top {
+                    right: 118px;
+                    top: 13px;
+                    left: unset;
+                }
+
+                &.bottom {
+                    right: 227px;
+                }
+            }
+        }
+    }
+}

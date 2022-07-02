@@ -41,7 +41,7 @@
                 <?php endif; ?>
             </a>
 
-            <button class="btn bg-transparent <?= icon_class("menu") ?> d-lg-none ml-auto"></button>
+            <button class="btn bg-transparent <?= icon_class("menu") ?> d-lg-none ml-auto btn-mobile-menu"></button>
 
             <div class="header-nav d-none d-lg-flex">
                 <ul class="nav">

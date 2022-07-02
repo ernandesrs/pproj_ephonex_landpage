@@ -2,11 +2,12 @@ body {
     background-color: $light-light;
     background-repeat: no-repeat;
     background-position: 0 329px;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     min-height: 100vh;
     color: $dark;
     font-family: "Ubuntu", sans-serif;
+    overflow-x: hidden;
 
     .btn {
         border-radius: 1.563rem;
@@ -60,316 +61,326 @@ body {
             }
         }
     }
+}
 
-    .header {
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 2;
+
+    .container {
+        display: flex;
+    }
+
+    .header-brand {
+        img {
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+
+    .btn-mobile-menu {
+        font-size: 1.5rem;
+        padding: 0;
+
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+    .header-nav {
         display: flex;
         align-items: center;
         width: 100%;
-        height: 100px;
-        position: relative;
-        z-index: 2;
 
-        .container {
-            display: flex;
+        .nav {
+            margin-left: auto;
+
+            .nav-item {
+                .nav-link {
+                    background-color: rgb($light-light, 0.5);
+                    text-transform: uppercase;
+                    font-size: 0.938rem;
+                    border-radius: 1.25rem;
+                    padding-top: 0.3rem;
+                    padding-bottom: 0.3rem;
+                }
+            }
         }
+    }
+
+    &.fixed-header-navbar {
+        background-color: rgb($light, 0.98) !important;
+        width: calc(100% - 12px);
+        height: 50px !important;
+        margin-left: 6px;
+        border-left: 1px solid $primary-light  !important;
+        border-right: 1px solid $primary-light  !important;
+        border-bottom: 1px solid $primary-light  !important;
+        box-shadow: 0 0 8px 4px rgb($dark-dark, 0.25) !important;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
 
         .header-brand {
             img {
                 width: 100%;
-                max-width: 243px;
+                max-width: 125px;
             }
         }
 
         .header-nav {
-            display: flex;
-            align-items: center;
-            width: 100%;
-
             .nav {
-                margin-left: auto;
-
                 .nav-item {
                     .nav-link {
-                        background-color: rgb($light-light, 0.5);
-                        text-transform: uppercase;
-                        font-size: 0.938rem;
-                        border-radius: 1.25rem;
-                        padding-top: 0.3rem;
-                        padding-bottom: 0.3rem;
+                        font-size: 0.8rem;
                     }
                 }
             }
-        }
 
-        &.fixed-header-navbar {
-            background-color: rgb($light-light, 0.98)  !important;
-            width: calc(100% - 12px);
-            height: 50px !important;
-            margin-left: 6px;
-            border-left: 1px solid $primary-light  !important;
-            border-right: 1px solid $primary-light  !important;
-            border-bottom: 1px solid $primary-light  !important;
-            box-shadow: 0 0 8px 4px rgb($dark-dark, 0.25) !important;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-
-            .header-brand {
-                img {
-                    width: 100%;
-                    max-width: 125px;
-                }
-            }
-
-            .header-nav {
-                .nav {
-                    .nav-item {
-                        .nav-link {
-                            font-size: 0.8rem;
-                        }
-                    }
-                }
-
-                .btn {
-                    padding-top: 4px !important;
-                    padding-bottom: 4px !important;
-                }
+            .btn {
+                padding-top: 4px !important;
+                padding-bottom: 4px !important;
             }
         }
     }
+}
 
-    .banner {
-        display: flex;
-        align-items: center;
-        height: calc(100vh - 100px);
-        overflow-y: visible;
+.banner {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 100px);
+    overflow-y: visible;
 
-        .banner-content {
+    .banner-content {
+        position: relative;
+        z-index: 2;
+
+        .title {
+            font-weight: 700;
+            font-size: 2.25rem;
+        }
+
+        .subtitle {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+
+    .banner-ilustrations {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        .image {
+            width: 100%;
+            position: absolute;
+            right: 0;
+
+            &.overshadowed {
+                display: none;
+                max-width: 230px;
+                top: 172px;
+                right: 516px;
+                filter: blur(1px);
+            }
+
+            &.top {
+                max-width: 310px;
+                left: -100px;
+                top: 75px;
+                filter: blur(4px);
+            }
+
+            &.bottom {
+                max-width: 420px;
+                right: -210px;
+                bottom: -90px;
+            }
+        }
+    }
+}
+
+.main {
+    .cards-list {
+        .bottom {
+            margin-top: 125px;
+        }
+
+        .card {
+            border: 0;
+        }
+
+        .card-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: $spacer * 4.5 $spacer * 2.5;
             position: relative;
-            z-index: 2;
+            overflow: hidden;
+            border-radius: 3.125rem;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+            cursor: default;
+
+            .icon-area {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 200px;
+                border: 10px dashed $light;
+                border-radius: 50%;
+                margin-bottom: $spacer * 1.5;
+
+                .icon {
+                    font-size: 6.25rem;
+                }
+            }
 
             .title {
                 font-weight: 700;
-                font-size: 4.25rem;
+                font-size: 2.188rem;
+                padding: $spacer 0;
+                text-transform: uppercase;
             }
 
-            .subtitle {
+            .description {
                 font-weight: 500;
-                font-size: 1.25rem;
-            }
-        }
-
-        .banner-ilustrations {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-
-            .image {
-                width: 100%;
-                position: absolute;
-                right: 0;
-
-                &.overshadowed {
-                    max-width: 230px;
-                    top: 172px;
-                    right: 516px;
-                    filter: blur(1px);
-                }
-
-                &.top {
-                    max-width: 310px;
-                    right: 118px;
-                    top: 13px;
-                    filter: blur(4px);
-                }
-
-                &.bottom {
-                    max-width: 420px;
-                    right: 227px;
-                    bottom: -90px;
-                }
-            }
-        }
-    }
-
-    .main {
-        .cards-list {
-            .bottom {
-                margin-top: 125px;
+                font-size: 1.563rem;
+                padding: 0 $spacer * 1.5;
             }
 
-            .card {
-                border: 0;
-            }
-
-            .card-item {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                padding: $spacer * 4.5 $spacer * 2.5;
+            .icon-area,
+            .title,
+            .description {
                 position: relative;
-                overflow: hidden;
-                border-radius: 3.125rem;
-                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
-                cursor: default;
+                z-index: 2;
+            }
 
+            &::after {
+                content: "";
+                width: 275px;
+                height: 275px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                bottom: 0;
+                transform: translateX(calc(275px / 2)) translateY(calc(275px / 2));
+            }
+
+            &.primary {
                 .icon-area {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 200px;
-                    height: 200px;
-                    border: 10px dashed $light;
-                    border-radius: 50%;
-                    margin-bottom: $spacer * 1.5;
-
-                    .icon {
-                        font-size: 6.25rem;
-                    }
+                    border-color: $primary;
                 }
 
-                .title {
-                    font-weight: 700;
-                    font-size: 2.188rem;
-                    padding: $spacer 0;
-                    text-transform: uppercase;
-                }
-
-                .description {
-                    font-weight: 500;
-                    font-size: 1.563rem;
-                    padding: 0 $spacer * 1.5;
-                }
-
-                .icon-area,
                 .title,
-                .description {
-                    position: relative;
-                    z-index: 2;
+                .icon-area .icon {
+                    color: $primary;
                 }
 
                 &::after {
-                    content: "";
-                    width: 275px;
-                    height: 275px;
-                    border-radius: 50%;
-                    position: absolute;
-                    z-index: 1;
-                    right: 0;
-                    bottom: 0;
-                    transform: translateX(calc(275px / 2)) translateY(calc(275px / 2));
+                    background-color: $primary;
+                }
+            }
+
+            &.primary-light {
+                .icon-area {
+                    border-color: $primary-light;
                 }
 
-                &.primary {
-                    .icon-area {
-                        border-color: $primary;
-                    }
-
-                    .title,
-                    .icon-area .icon {
-                        color: $primary;
-                    }
-
-                    &::after {
-                        background-color: $primary;
-                    }
+                .title,
+                .icon-area .icon {
+                    color: $primary-light;
                 }
 
-                &.primary-light {
-                    .icon-area {
-                        border-color: $primary-light;
-                    }
+                &::after {
+                    background-color: $primary-light;
+                }
+            }
 
-                    .title,
-                    .icon-area .icon {
-                        color: $primary-light;
-                    }
-
-                    &::after {
-                        background-color: $primary-light;
-                    }
+            &.primary-dark {
+                .icon-area {
+                    border-color: $primary-dark;
                 }
 
-                &.primary-dark {
-                    .icon-area {
-                        border-color: $primary-dark;
-                    }
-
-                    .title,
-                    .icon-area .icon {
-                        color: $primary-dark;
-                    }
-
-                    &::after {
-                        background-color: $primary-dark;
-                    }
+                .title,
+                .icon-area .icon {
+                    color: $primary-dark;
                 }
 
-                &.secondary {
-                    .icon-area {
-                        border-color: $secondary;
-                    }
+                &::after {
+                    background-color: $primary-dark;
+                }
+            }
 
-                    .title,
-                    .icon-area .icon {
-                        color: $secondary;
-                    }
-
-                    &::after {
-                        background-color: $secondary;
-                    }
+            &.secondary {
+                .icon-area {
+                    border-color: $secondary;
                 }
 
-                &.secondary-light {
-                    .icon-area {
-                        border-color: $secondary-light;
-                    }
-
-                    .title,
-                    .icon-area .icon {
-                        color: $secondary-light;
-                    }
-
-                    &::after {
-                        background-color: $secondary-light;
-                    }
+                .title,
+                .icon-area .icon {
+                    color: $secondary;
                 }
 
-                &.secondary-dark {
-                    .icon-area {
-                        border-color: $secondary-dark;
-                    }
+                &::after {
+                    background-color: $secondary;
+                }
+            }
 
-                    .title,
-                    .icon-area .icon {
-                        color: $secondary-dark;
-                    }
-
-                    &::after {
-                        background-color: $secondary-dark;
-                    }
+            &.secondary-light {
+                .icon-area {
+                    border-color: $secondary-light;
                 }
 
-                &:hover {
-                    &::after {
-                        animation-name: cardHoverAnimationIn;
-                        animation-duration: 0.5s;
-                        animation-timing-function: ease-in-out;
-                        animation-iteration-count: 1;
-                        animation-fill-mode: both;
-                    }
+                .title,
+                .icon-area .icon {
+                    color: $secondary-light;
                 }
 
-                @keyframes cardHoverAnimationIn {
-                    100% {
-                        background-color: $light;
-                        width: 1000px;
-                        height: 1000px;
-                    }
+                &::after {
+                    background-color: $secondary-light;
+                }
+            }
+
+            &.secondary-dark {
+                .icon-area {
+                    border-color: $secondary-dark;
+                }
+
+                .title,
+                .icon-area .icon {
+                    color: $secondary-dark;
+                }
+
+                &::after {
+                    background-color: $secondary-dark;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    animation-name: cardHoverAnimationIn;
+                    animation-duration: 0.5s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: both;
+                }
+            }
+
+            @keyframes cardHoverAnimationIn {
+                100% {
+                    background-color: $light;
+                    width: 1000px;
+                    height: 1000px;
                 }
             }
         }
