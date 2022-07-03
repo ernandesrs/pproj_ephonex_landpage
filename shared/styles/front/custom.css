@@ -9190,7 +9190,7 @@ body .icon.loading::before {
 }
 
 .main .cards-list .bottom {
-  margin-top: 125px;
+  margin-top: 0;
 }
 .main .cards-list .card {
   border: 0;
@@ -9212,24 +9212,24 @@ body .icon.loading::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
-  border: 10px dashed #F3F3F3;
+  width: 125px;
+  height: 125px;
+  border: 6px dashed #F3F3F3;
   border-radius: 50%;
   margin-bottom: 1.5rem;
 }
 .main .cards-list .card-item .icon-area .icon {
-  font-size: 6.25rem;
+  font-size: 3.25rem;
 }
 .main .cards-list .card-item .title {
   font-weight: 700;
-  font-size: 2.188rem;
-  padding: 1rem 0;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
   text-transform: uppercase;
 }
 .main .cards-list .card-item .description {
   font-weight: 500;
-  font-size: 1.563rem;
+  font-size: 1.2rem;
   padding: 0 1.5rem;
 }
 .main .cards-list .card-item .icon-area,
@@ -9337,10 +9337,27 @@ body .icon.loading::before {
   .banner .banner-ilustrations .image.bottom {
     right: -150px;
   }
+  .main .cards-list .card-item {
+    padding: 2.5rem 1rem;
+  }
 }
 @media (min-width: 992px) {
   .header .header-brand img {
     max-width: 243px;
+  }
+  .main .cards-list .card-item {
+    padding: 4.5rem 2.5rem;
+  }
+  .main .cards-list .card-item .icon-area {
+    width: 175px;
+    height: 175px;
+    border-width: 8px;
+  }
+  .main .cards-list .card-item .icon-area .icon {
+    font-size: 4.5rem;
+  }
+  .main .cards-list .card-item .title {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1200px) {
@@ -9360,6 +9377,12 @@ body .icon.loading::before {
   }
   .banner .banner-ilustrations .image.bottom {
     right: 227px;
+  }
+  .main .cards-list .top {
+    margin-top: -25px;
+  }
+  .main .cards-list .bottom {
+    margin-top: 75px;
   }
 }
 

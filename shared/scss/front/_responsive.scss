@@ -15,10 +15,18 @@
                 &.top {
                     left: -50px;
                 }
-    
+
                 &.bottom {
                     right: -150px;
                 }
+            }
+        }
+    }
+
+    .main {
+        .cards-list {
+            .card-item {
+                padding: $spacer * 2.5 $spacer * 1;
             }
         }
     }
@@ -29,6 +37,28 @@
         .header-brand {
             img {
                 max-width: 243px;
+            }
+        }
+    }
+
+    .main {
+        .cards-list {
+            .card-item {
+                padding: $spacer * 4.5 $spacer * 2.5;
+
+                .icon-area {
+                    width: 175px;
+                    height: 175px;
+                    border-width: 8px;
+
+                    .icon {
+                        font-size: 4.5rem;
+                    }
+                }
+
+                .title {
+                    font-size: 1.8rem;
+                }
             }
         }
     }
@@ -62,6 +92,20 @@
                     right: 227px;
                 }
             }
+        }
+    }
+
+    .main {
+        .cards-list {
+            .top {
+                margin-top: -25px;
+            }
+
+            .bottom {
+                margin-top: 75px;
+            }
+
+            .card-item {}
         }
     }
 }

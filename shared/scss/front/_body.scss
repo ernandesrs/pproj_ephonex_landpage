@@ -86,7 +86,7 @@ body {
         font-size: 1.5rem;
         padding: 0;
 
-        &:focus{
+        &:focus {
             box-shadow: none;
         }
     }
@@ -209,7 +209,7 @@ body {
 .main {
     .cards-list {
         .bottom {
-            margin-top: 125px;
+            margin-top: 0;
         }
 
         .card {
@@ -233,27 +233,27 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 200px;
-                height: 200px;
-                border: 10px dashed $light;
+                width: 125px;
+                height: 125px;
+                border: 6px dashed $light;
                 border-radius: 50%;
                 margin-bottom: $spacer * 1.5;
 
                 .icon {
-                    font-size: 6.25rem;
+                    font-size: 3.25rem;
                 }
             }
 
             .title {
                 font-weight: 700;
-                font-size: 2.188rem;
-                padding: $spacer 0;
+                font-size: 1.6rem;
+                padding: $spacer / 2 0;
                 text-transform: uppercase;
             }
 
             .description {
                 font-weight: 500;
-                font-size: 1.563rem;
+                font-size: 1.2rem;
                 padding: 0 $spacer * 1.5;
             }
 
