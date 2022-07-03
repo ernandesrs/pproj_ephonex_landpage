@@ -89,17 +89,11 @@ if ($banner ?? null) {
 
 <script src="<?= asset("js/rellax.min.js") ?>"></script>
 <script>
-    var bannerImageOne = new Rellax('#banner-content', {
-        speed: 4,
-    });
-    var bannerImageTwo = new Rellax('#banner-image-two', {
-        speed: -2,
-    });
-    var bannerImageThree = new Rellax('#banner-image-three', {
+    var bannerContent = new Rellax('#banner-content', {
         speed: 6,
     });
-    var bannerImageThree = new Rellax('#banner-image-three', {
-        speed: 6,
+    var bannerImageOne = new Rellax('#banner-image-one', {
+        speed: 8,
     });
 </script>
 

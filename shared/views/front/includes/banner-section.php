@@ -24,8 +24,10 @@
     </div>
 
     <div class="banner-ilustrations">
-        <?php foreach ($banner->images as $bImage) : ?>
-            <img class="image <?= $bImage->class ?>" <?= !empty($bImage->id) ? "id='{$bImage->id}'" : null ?> src="<?= url("shared/" . $bImage->path) ?>" alt="<?= $bImage->name ?>">
+        <?php
+        $count = count($banner->images);
+        foreach ($banner->images as $bImage) : ?>
+            <img class="image <?= $count > 1 ? $bImage->class : "unique" ?>" <?= !empty($bImage->id) ? "id='{$bImage->id}'" : null ?> src="<?= url("shared/" . $bImage->path) ?>" alt="<?= $bImage->name ?>">
         <?php endforeach; ?>
     </div>
 </div>

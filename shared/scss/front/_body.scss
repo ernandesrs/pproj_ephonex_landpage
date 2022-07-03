@@ -200,6 +200,12 @@ body {
             position: absolute;
             right: 0;
 
+            &.unique {
+                width: auto;
+                top: $spacer;
+                right: $spacer * 2;
+            }
+
             &.overshadowed {
                 display: none;
                 max-width: 230px;

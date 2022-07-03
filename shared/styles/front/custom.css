@@ -9189,6 +9189,11 @@ body .icon.loading::before {
   position: absolute;
   right: 0;
 }
+.banner .banner-ilustrations .image.unique {
+  width: auto;
+  top: 1rem;
+  right: 2rem;
+}
 .banner .banner-ilustrations .image.overshadowed {
   display: none;
   max-width: 230px;

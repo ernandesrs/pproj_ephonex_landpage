@@ -49,22 +49,10 @@ class IndexController extends FrontController
                 "images" => [
                     (object) [
                         "name" => "01",
-                        "path" => "/images/front/image_01.png",
+                        "path" => "/images/front/floating_earphones.png",
                         "class" => "top",
                         "id" => "banner-image-one",
-                    ],
-                    (object) [
-                        "name" => "02",
-                        "path" => "/images/front/image_02.png",
-                        "class" => "overshadowed",
-                        "id" => "banner-image-two",
-                    ],
-                    (object) [
-                        "name" => "03",
-                        "path" => "/images/front/image_03.png",
-                        "class" => "bottom",
-                        "id" => "banner-image-three",
-                    ],
+                    ]
                 ],
             ]
         ])->seo("Bem vindo ao front do site")->render();
