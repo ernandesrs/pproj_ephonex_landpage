@@ -54,6 +54,9 @@ if ($banner ?? null) {
             </div>
         </div>
     </div>
+
+    <div class="decoration-square-group section01-left-decoration" style="background-image: url(<?= url("shared/images/front/deco-squares.svg") ?>);"></div>
+    <div class="decoration-square-group section01-right-decoration" style="background-image: url(<?= url("shared/images/front/deco-squares.svg") ?>);"></div>
 </section>
 
 <!-- section 02 -->
@@ -63,6 +66,8 @@ if ($banner ?? null) {
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <h2 class="title">Alta qualidade e baixo preço!</h2>
+            </div>
+            <div class="col-12 col-lg-8 col-xl-7">
                 <p class="subtitle">
                     Aenean placerat, in vulputate urna eu arcu morbi mattis felis at
                     nunc. Aenean placerat. In vulputate urna eu arcu. Aliquam erat volutpat.
@@ -70,8 +75,8 @@ if ($banner ?? null) {
                 </p>
             </div>
             <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center">
-                <a class="pb-3" href="">Não quero perder tempo</a>
-                <a class="btn btn-primary" href="">Me leve para loja</a>
+                <a class="pb-3" href="">Não perca tempo</a>
+                <a class="btn btn-primary" href="">Ir para loja</a>
             </div>
         </div>
     </div>

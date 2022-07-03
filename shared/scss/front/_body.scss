@@ -69,10 +69,11 @@ body {
     width: 100%;
     height: 100px;
     position: relative;
-    z-index: 2;
+    z-index: 100;
 
     .container {
         display: flex;
+        position: relative;
     }
 
     .header-brand {
@@ -93,13 +94,28 @@ body {
 
     .header-nav {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-end;
         width: 100%;
 
+        background-color: $light-light;
+        box-shadow: 0 6px 12px -2px rgb($dark-light, 0.5);
+        border-radius: 12px;
+        padding: $spacer * 1.5 $spacer;
+        position: absolute;
+        left: 0;
+        top: 75px;
+
         .nav {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-end;
             margin-left: auto;
+            padding: 0 0 $spacer * 1.5 0;
 
             .nav-item {
+                margin-bottom: $spacer / 5;
+
                 .nav-link {
                     background-color: rgb($light-light, 0.5);
                     text-transform: uppercase;
@@ -132,6 +148,8 @@ body {
         }
 
         .header-nav {
+            top: 46px;
+
             .nav {
                 .nav-item {
                     .nav-link {
@@ -207,7 +225,30 @@ body {
 }
 
 .main {
+    .decoration-square-group {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 290px 240px;
+        width: 290px;
+        height: 240px;
+        position: absolute;
+        z-index: 0;
+
+        &.section01-left-decoration {
+            left: $spacer;
+            bottom: calc(($spacer * 2) * -1);
+        }
+
+        &.section01-right-decoration {
+            right: $spacer;
+            bottom: calc((290px * 2) - ($spacer * 2));
+        }
+    }
+
     .cards-list {
+        position: relative;
+        z-index: 1;
+
         .bottom {
             margin-top: 0;
         }
@@ -387,11 +428,13 @@ body {
     }
 
     .section {
+        position: relative;
+
         &.section-two {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            min-height: 100vh;
+            min-height: 815px;
 
             .title {
                 font-size: 2.25rem;
@@ -430,7 +473,6 @@ body {
                 text-align: center;
                 color: $light-light;
             }
-
         }
     }
 }

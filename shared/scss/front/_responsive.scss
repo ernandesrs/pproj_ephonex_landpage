@@ -54,6 +54,36 @@
                 max-width: 243px;
             }
         }
+
+        .container {
+            align-items: center;
+        }
+
+        .header-nav {
+            background-color: transparent;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            top: 0;
+            box-shadow: none;
+
+            .nav {
+                flex-direction: row;
+                justify-content: end;
+                align-items: center;
+                padding-bottom: unset;
+
+                .nav-item {
+                    margin-bottom: unset;
+                }
+            }
+        }
+
+        &.fixed-header-navbar {
+            .header-nav {
+                top: 0;
+            }
+        }
     }
 
     .main {
@@ -125,9 +155,6 @@
 
         .section {
             &.section-two {
-                min-height: 1115px;
-                background-size: contain;
-
                 .title {
                     font-size: 4.75rem;
 
