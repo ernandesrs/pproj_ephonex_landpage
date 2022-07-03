@@ -9120,9 +9120,9 @@ body .icon.loading::before {
   width: calc(100% - 12px);
   height: 50px !important;
   margin-left: 6px;
-  border-left: 1px solid #A33BC8 !important;
-  border-right: 1px solid #A33BC8 !important;
-  border-bottom: 1px solid #A33BC8 !important;
+  border-left: 1px solid rgba(68, 68, 68, 0.25) !important;
+  border-right: 1px solid rgba(68, 68, 68, 0.25) !important;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.25) !important;
   box-shadow: 0 0 8px 4px rgba(24, 24, 24, 0.25) !important;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -9323,6 +9323,44 @@ body .icon.loading::before {
     height: 1000px;
   }
 }
+.main .section.section-two {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+.main .section.section-two .title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  padding: 2rem 0;
+  color: #3E8AFF;
+}
+.main .section.section-two .title::before, .main .section.section-two .title::after {
+  content: "";
+  position: absolute;
+  border: 10px solid #649FF9;
+  width: 145px;
+  height: 100%;
+  top: 0;
+}
+.main .section.section-two .title::before {
+  border-right-width: 0;
+  left: 0;
+  box-shadow: -8px 0 12px -2px rgba(0, 0, 0, 0.25);
+}
+.main .section.section-two .title::after {
+  border-left-width: 0;
+  right: 0;
+  box-shadow: 8px 0 12px -2px rgba(0, 0, 0, 0.25);
+}
+.main .section.section-two .subtitle {
+  font-size: 1rem;
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+  color: #F9F9F9;
+}
 
 @media (min-width: 768px) {
   .banner .banner-content .title {
@@ -9340,8 +9378,18 @@ body .icon.loading::before {
   .main .cards-list .card-item {
     padding: 2.5rem 1rem;
   }
+  .main .section.section-two {
+    background-size: contain;
+  }
+  .main .section.section-two .title {
+    font-size: 3.25rem;
+    font-weight: 700;
+  }
 }
 @media (min-width: 992px) {
+  body {
+    background-size: contain;
+  }
   .header .header-brand img {
     max-width: 243px;
   }
@@ -9383,6 +9431,26 @@ body .icon.loading::before {
   }
   .main .cards-list .bottom {
     margin-top: 75px;
+  }
+  .main .section.section-two {
+    min-height: 1115px;
+    background-size: contain;
+  }
+  .main .section.section-two .title {
+    font-size: 4.75rem;
+  }
+  .main .section.section-two .title::before, .main .section.section-two .title::after {
+    border-width: 20px;
+  }
+  .main .section.section-two .title::before {
+    border-right-width: 0;
+  }
+  .main .section.section-two .title::after {
+    border-left-width: 0;
+  }
+  .main .section.section-two .subtitle {
+    font-size: 1.25rem;
+    color: #343434;
   }
 }
 

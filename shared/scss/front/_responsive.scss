@@ -29,10 +29,25 @@
                 padding: $spacer * 2.5 $spacer * 1;
             }
         }
+
+        .section {
+            &.section-two {
+                background-size: contain;
+
+                .title {
+                    font-size: 3.25rem;
+                    font-weight: 700;
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 992px) {
+    body {
+        background-size: contain;
+    }
+
     .header {
         .header-brand {
             img {
@@ -106,6 +121,35 @@
             }
 
             .card-item {}
+        }
+
+        .section {
+            &.section-two {
+                min-height: 1115px;
+                background-size: contain;
+
+                .title {
+                    font-size: 4.75rem;
+
+                    &::before,
+                    &::after {
+                        border-width: 20px;
+                    }
+
+                    &::before {
+                        border-right-width: 0;
+                    }
+
+                    &::after {
+                        border-left-width: 0;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 1.25rem;
+                    color: $dark;
+                }
+            }
         }
     }
 }
